@@ -1,0 +1,40 @@
+======================================================
+COE67-222 Operating Systems - Lab 03 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. The Race Condition (Phase 2):
+In the `race_condition.py` script, what exactly causes 
+the final weight to be less than the expected value? 
+Explain the role of the OS Scheduler in this error.
+    Answer:The operation is not atomic. The OS Scheduler 
+interrupts the thread midway, allowing another thread 
+to read and overwrite the memory using an outdated value, 
+causing data loss.
+
+2. Mutex vs. Semaphore (Phase 3):
+In `producer_consumer.py`:
+- What is the specific job of the `mutex`?
+- What is the specific job of the `empty` and `full` semaphores? 
+(Why can't we just use a Mutex for everything?)
+    Answer:
+        Mutex: Locks the critical section so only one thread can 
+access it at a time.  
+        Semaphores (empty/full): Count available slots and signal 
+threads to wait or proceed.  
+        Why not just Mutex?: A Mutex can only lock/unlock (1 or 0). 
+It cannot count multiple resources (like 5 buffer slots) or signal 
+other threads.
+
+3. Deadlock Awareness:
+In the Producer function, we wrote:
+    empty.acquire()
+    mutex.acquire()
+What would happen if we swapped these two lines? (mutex first, 
+then empty). Imagine the buffer is completely full. Explain the 
+potential OS problem.
+    Answer: It will cause a Deadlock. The Producer locks the mutex 
+    first, then sleeps waiting for an empty slot. The Consumer cannot 
+    create an empty slot because the Producer is holding the mutex lock, 
+    so both wait forever.
