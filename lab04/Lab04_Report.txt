@@ -1,0 +1,38 @@
+======================================================
+COE67-222 Operating Systems - Lab 04 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. The Deadlock (Phase 2):
+Answer: Circular Wait occurred because Model A locked GPU 0 
+and waited for GPU 1, while at the same time, Model B locked 
+GPU 1 and waited for GPU 0. Both models held a resource the 
+other needed while waiting indefinitely for the other's resource, 
+creating an endless cycle (Circular Wait).
+
+2. The Solution (Phase 3):
+Answer: Forcing Model B to request GPU 0 first enforces a strict 
+Resource Hierarchy (Lock Ordering). This breaks the Circular Wait 
+because only one model can acquire GPU 0 at a time. The winner proceeds 
+to take GPU 1 and finish, while the loser waits at the first step without 
+holding any resources, eliminating the deadlock.
+
+3. Starvation vs Deadlock (Phase 4):
+Answer: 
+- Difference: In a Deadlock, the system completely freezes and makes no 
+progress[cite: 4]. In Starvation, the system continues running, but the 
+Polite_Model is constantly denied access to the resource because the Greedy 
+models monopolize it[cite: 4].
+- Aging: The OS Scheduler uses Aging to gradually increase the priority of 
+the Polite_Model the longer it waits in the system, ensuring that it eventually 
+gets high enough priority to acquire the resource and execute[cite: 4].
+
+4. Deadlock Detection & Recovery (Phase 5):
+Answer: 
+- Timeout Simulation: The `timeout=2.0` parameter simulates OS monitoring. 
+If a process waits for a resource longer than this threshold, the OS detects a 
+potential Deadlock[cite: 4].
+- Recovery Step: Once detected, Model A performed Recovery by releasing (yielding) 
+GPU 0 back to the system (Rollback)[cite: 4]. This allowed Model B to acquire GPU 0, 
+finish its execution, and prevent a total system freeze[cite: 4].
