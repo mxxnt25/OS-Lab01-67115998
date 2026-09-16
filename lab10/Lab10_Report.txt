@@ -1,0 +1,47 @@
+======================================================
+COE67-222 Operating Systems - Lab 10 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. The Role of the Operating System
+
+**File System and Permissions:**
+The script uses `os.path.exists()` to check the dataset 
+path. Workload D fails because `secret_keys.txt` does not 
+exist. This checks file existence, but it does not fully 
+test read permissions.
+
+Memory Management:
+Each job checks whether enough RAM is available before reserving 
+it. If there is not enough RAM, the job waits and checks again. 
+The RAM lock protects the shared RAM counter. This models avoiding 
+memory over-allocation, although the script does not create real 
+memory pressure or swapping.
+
+Concurrency and Deadlocks:
+The script sorts GPU IDs before acquiring their locks. Using the 
+same acquisition order prevents circular waiting between GPU locks. 
+Jobs release the GPUs and return their RAM when they finish.
+
+Scheduling Queue:
+Jobs enter a queue, and the scheduler starts a worker thread for each 
+job. Workers can run concurrently when their required resources are 
+available. This script uses a queue and threads rather than Round Robin 
+time slicing.
+
+2. Hardware Utilization
+
+Workload A uses 40 GB of RAM and GPUs 0, 1, and 2. Workload B uses 16 GB 
+of RAM without a GPU, while Workload C uses 2 GB and GPU 3. Their combined 
+RAM requirement is 58 GB, leaving 6 GB available. Since their GPU requirements 
+do not conflict and enough RAM is available, all three jobs can overlap in the 
+simulation.
+
+3. Course Reflection
+
+Understanding OS internals helps me identify why an AI application is slow, 
+blocked, or unable to run. I can check memory limits, resource conflicts, file 
+permissions, and job queues instead of only looking at the model code. This 
+knowledge can help me build and operate more reliable AI systems as an MLOps 
+engineer.

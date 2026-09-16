@@ -1,0 +1,64 @@
+=== Booting AI Cluster OS (64GB RAM, 4 GPUs) ===
+📥 [API] Submitted: Workload_A_LLaMA -> Queued.
+⏳ [Workload_A_LLaMA] Waiting for 40GB RAM...
+🧠 [Workload_A_LLaMA] Allocated 40GB RAM.
+⏳ [Workload_A_LLaMA] Waiting for GPUs [0, 1, 2]...
+🟢 [Workload_A_LLaMA] Acquired GPUs [0, 1, 2]. Running!
+📥 [API] Submitted: Workload_B_Preproc -> Queued.
+⏳ [Workload_B_Preproc] Waiting for 16GB RAM...
+🧠 [Workload_B_Preproc] Allocated 16GB RAM.
+🟢 [Workload_B_Preproc] Running on CPU only!
+
+==================================================
+[LIVE DASHBOARD] RAM Available: 8/64 GB
+[LIVE DASHBOARD] GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: IDLE
+[LIVE DASHBOARD] Queue Size: 0 | Active Jobs: 2
+==================================================
+
+📥 [API] Submitted: Workload_C_Infer -> Queued.
+⏳ [Workload_C_Infer] Waiting for 2GB RAM...
+🧠 [Workload_C_Infer] Allocated 2GB RAM.
+⏳ [Workload_C_Infer] Waiting for GPUs [3]...
+🟢 [Workload_C_Infer] Acquired GPUs [3]. Running!
+
+==================================================
+[LIVE DASHBOARD] RAM Available: 6/64 GB
+[LIVE DASHBOARD] GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: BUSY (Workload_C_Infer)
+[LIVE DASHBOARD] Queue Size: 0 | Active Jobs: 3
+==================================================
+
+📥 [API] Submitted: Workload_D_Hacker -> Queued.
+❌ [Workload_D_Hacker] FAILED: Dataset 'secret_keys.txt' not found or Permission Denied.
+
+==================================================
+[LIVE DASHBOARD] RAM Available: 6/64 GB
+[LIVE DASHBOARD] GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: BUSY (Workload_C_Infer)
+[LIVE DASHBOARD] Queue Size: 0 | Active Jobs: 3
+==================================================
+
+✅ [Workload_C_Infer] Finished successfully.
+
+==================================================
+[LIVE DASHBOARD] RAM Available: 8/64 GB
+[LIVE DASHBOARD] GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: IDLE
+[LIVE DASHBOARD] Queue Size: 0 | Active Jobs: 2
+==================================================
+
+✅ [Workload_B_Preproc] Finished successfully.
+
+==================================================
+[LIVE DASHBOARD] RAM Available: 24/64 GB
+[LIVE DASHBOARD] GPU 0: BUSY (Workload_A_LLaMA) | GPU 1: BUSY (Workload_A_LLaMA) | GPU 2: BUSY (Workload_A_LLaMA) | GPU 3: IDLE
+[LIVE DASHBOARD] Queue Size: 0 | Active Jobs: 1
+==================================================
+
+✅ [Workload_A_LLaMA] Finished successfully.
+
+==================================================
+[LIVE DASHBOARD] RAM Available: 64/64 GB
+[LIVE DASHBOARD] GPU 0: IDLE | GPU 1: IDLE | GPU 2: IDLE | GPU 3: IDLE
+[LIVE DASHBOARD] Queue Size: 0 | Active Jobs: 0
+==================================================
+
+
+=== Cluster OS Shutdown Gracefully ===
