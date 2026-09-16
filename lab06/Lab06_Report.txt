@@ -1,0 +1,24 @@
+======================================================
+COE67-222 Operating Systems - Lab 06 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. FIFO vs LRU (Phase 2):
+IFIFO produced 9 page faults, while LRU produced 7. 
+LRU removes the page that has not been used for the 
+longest time. For this request sequence, keeping recently 
+used pages helped reduce page faults.
+
+2. Understanding Thrashing (Phase 3):
+Thrashing happens when the system spends too much time moving 
+pages between RAM and disk instead of processing tasks. This 
+experiment simulated repeated file reads and writes to illustrate 
+this overhead. Scenario 1 took 0.7436 seconds, while Scenario 2 
+took 2.2790 seconds, giving a time difference of ___ seconds.
+
+3. AI Engineering Decision:
+Reducing batch_size means processing fewer samples at once, 
+which usually requires less memory. If the data fits in RAM, 
+the OS needs less swapping, reducing the risk of thrashing and 
+helping training run more smoothly.

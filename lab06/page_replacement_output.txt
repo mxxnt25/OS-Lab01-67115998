@@ -1,0 +1,30 @@
+
+--- Running FIFO Algorithm (Frames: 3) ---
+Page Fault! Loaded Page 2 (Empty Frame)
+Page Fault! Loaded Page 3 (Empty Frame)
+Page Hit! Page 2 is already in RAM.
+Page Fault! Loaded Page 1 (Empty Frame)
+Page Fault! Evicted Page 2. Loaded Page 5
+Page Fault! Evicted Page 3. Loaded Page 2
+Page Fault! Evicted Page 1. Loaded Page 4
+Page Hit! Page 5 is already in RAM.
+Page Fault! Evicted Page 5. Loaded Page 3
+Page Hit! Page 2 is already in RAM.
+Page Fault! Evicted Page 2. Loaded Page 5
+Page Fault! Evicted Page 4. Loaded Page 2
+>> Total FIFO Page Faults: 9
+
+--- Running LRU Algorithm (Frames: 3) ---
+Page Fault! Loaded Page 2 (Empty Frame)
+Page Fault! Loaded Page 3 (Empty Frame)
+Page Hit! Page 2 is already in RAM.
+Page Fault! Loaded Page 1 (Empty Frame)
+Page Fault! Evicted Page 3. Loaded Page 5
+Page Hit! Page 2 is already in RAM.
+Page Fault! Evicted Page 1. Loaded Page 4
+Page Hit! Page 5 is already in RAM.
+Page Fault! Evicted Page 2. Loaded Page 3
+Page Fault! Evicted Page 4. Loaded Page 2
+Page Hit! Page 5 is already in RAM.
+Page Hit! Page 2 is already in RAM.
+>> Total LRU Page Faults: 7
