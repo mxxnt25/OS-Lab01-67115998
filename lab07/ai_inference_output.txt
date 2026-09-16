@@ -1,0 +1,11 @@
+--- Incoming API Requests ---
+
+[AI Server] Strategy: First-Come, First-Served
+-> Starting User_A_Essay (Needs 10 tokens)...
+   [DONE] User_A_Essay finished. Responded perfectly.
+-> Starting User_B_Math (Needs 2 tokens)...
+   [DONE] User_B_Math finished. Responded perfectly.
+
+[AI Server] Strategy: Round Robin (Token-by-Token Continuous Batching)
+   [DONE] User_B_Math finished early! (Total: 2 tokens)
+   [DONE] User_A_Essay finished early! (Total: 10 tokens)

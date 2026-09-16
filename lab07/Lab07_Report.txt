@@ -1,0 +1,30 @@
+======================================================
+COE67-222 Operating Systems - Lab 07 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. The Convoy Effect
+
+In FCFS, P1 runs for 10 time units before the other 
+processes can start. This makes P2 wait 10 units and P3 
+wait 12 units, even though both are short tasks. This is 
+the convoy effect. With Round Robin and a quantum of 3, 
+P2 and P3 get CPU time earlier and finish sooner.
+
+2. Choosing the Time Quantum
+
+A very large quantum, such as 100, lets each process 
+in this experiment finish in one turn, so Round Robin 
+behaves like FCFS. A very small quantum causes frequent 
+context switches in a real OS. This overhead can reduce 
+efficiency, although the simulator does not measure it.
+
+3. AI Inference Scheduling
+
+Round Robin lets requests take turns generating tokens. 
+A short request can finish without waiting for a long 
+response to complete. This can reduce the wait for the 
+first token and make an AI service feel more responsive. 
+In the simulation, User B finishes before User A, but the 
+script does not measure the actual Time To First Token.

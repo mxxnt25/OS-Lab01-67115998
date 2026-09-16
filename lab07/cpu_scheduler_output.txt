@@ -1,0 +1,23 @@
+
+--- Running FCFS Scheduler ---
+[Time 00] Process P1 starts. (Wait time: 0)
+[Time 10] Process P1 finishes. (Turnaround time: 10)
+[Time 10] Process P2 starts. (Wait time: 10)
+[Time 12] Process P2 finishes. (Turnaround time: 12)
+[Time 12] Process P3 starts. (Wait time: 12)
+[Time 15] Process P3 finishes. (Turnaround time: 15)
+>> FCFS Average Waiting Time: 7.33
+>> FCFS Average Turnaround Time: 12.33
+
+--- Running Round Robin Scheduler (Quantum = 3) ---
+[Time 00] Process P1 runs for 3 units.
+[Time 03] Process P2 runs for 2 units.
+[Time 05] Process P2 finishes.
+[Time 05] Process P3 runs for 3 units.
+[Time 08] Process P3 finishes.
+[Time 08] Process P1 runs for 3 units.
+[Time 11] Process P1 runs for 3 units.
+[Time 14] Process P1 runs for 1 units.
+[Time 15] Process P1 finishes.
+>> Round Robin Average Waiting Time: 4.33
+>> Round Robin Average Turnaround Time: 9.33
