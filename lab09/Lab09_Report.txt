@@ -1,0 +1,30 @@
+======================================================
+COE67-222 Operating Systems - Lab 09 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. Inodes and Metadata
+
+Renaming a file within the same filesystem keeps its inode 
+number unchanged. The directory stores the filename and links 
+it to the inode. Renaming changes the directory entry, while 
+the file still uses the same inode.
+
+2. POSIX Permissions
+
+The permission is 750, written as `0o750` in Python. The owner 
+gets read, write, and execute permissions. The group gets read 
+and execute permissions, while others have no access.
+
+3. Protecting AI Model Weights
+
+OS permissions are enforced when a program accesses a file, 
+even if the program contains a mistake. Setting the weights to 
+`0o444` blocks ordinary write attempts and helps prevent accidental 
+overwriting. A Python `try-except` block only handles an error; it does 
+not enforce access permissions.
+
+To restrict reading as well, I would use `0o400` and assign ownership to 
+an authorized service account. Processes using that same account could still 
+read the file, so account separation is also important.

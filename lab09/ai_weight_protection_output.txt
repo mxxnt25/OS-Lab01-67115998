@@ -1,0 +1,7 @@
+Downloading 250MB Production Model Weights...
+AI Ops: Securing model weights at the OS level (Read-Only)...
+
+[Junior Dev] Running script: training_job.py
+[Junior Dev] 'Oops, I opened the production model in Write mode!'
+>>> [DISASTER AVERTED] OS Kernel denied write access.
+>>> The multi-million dollar model is safe.
