@@ -1,0 +1,28 @@
+======================================================
+COE67-222 Operating Systems - Lab 08 Report
+Name: Juthaphon Sungruang
+Student ID: 67115998
+======================================================
+
+1. Disk Scheduling
+
+FCFS produced 640 cylinders of head movement, while SCAN 
+produced 331. FCFS follows the request order, making the 
+head move back and forth. SCAN services requests in one 
+direction before reversing, which reduces head movement 
+for this request sequence.
+
+2. I/O Bound Concept
+
+An I/O-bound task spends much of its time waiting for 
+data to be read or written. The task does not fully use 
+the CPU while waiting. However, the OS can let other tasks 
+use the CPU during that time.
+
+3. AI Dataset and GPU Starvation
+
+Reading many separate image files requires repeated file lookups, 
+permission checks, and open/close operations. If data loading cannot 
+keep up with processing, the GPU must wait for the next batch. Packing 
+data into files that support sequential reading can reduce I/O overhead 
+and help keep the GPU busy.

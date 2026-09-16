@@ -1,0 +1,10 @@
+Initial Head Position: 53
+Incoming OS I/O Requests: [98, 183, 37, 122, 14, 124, 65, 67]
+
+--- FCFS Disk Scheduling ---
+Path: 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67
+>> Total Head Movement (Seek Time): 640 cylinders
+
+--- SCAN (Elevator) Disk Scheduling ---
+Path: 53 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183 -> 199 -> 37 -> 14
+>> Total Head Movement (Seek Time): 331 cylinders

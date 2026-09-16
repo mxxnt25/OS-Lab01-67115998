@@ -1,0 +1,8 @@
+Setting up test environments... (This might take a few seconds)
+Setup complete.
+
+Test 1: Reading 1000 separate small files (Raw Images)
+-> Time Taken: 0.0332 seconds
+
+Test 2: Reading 1 large packed file (TFRecord format)
+-> Time Taken: 0.0033 seconds
